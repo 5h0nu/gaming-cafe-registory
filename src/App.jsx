@@ -465,10 +465,20 @@ function App() {
             </div>
 
             {/* Center Book Button */}
-            <div className="hero-cta-btn-box">
+            <div className="hero-cta-btn-box" style={{ display: 'flex', justifyContent: 'center', gap: '16px', flexWrap: 'wrap' }}>
               <button className="btn-cyber btn-cyber-primary btn-hero-book" onClick={() => handleStartBooking(null)}>
                 <LucideIcons.Play size={18} /> BOOK YOUR SESSION NOW
               </button>
+              
+              <a 
+                href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(systemConfigs.location)}`}
+                target="_blank" 
+                rel="noreferrer"
+                className="btn-cyber btn-cyber-magenta btn-hero-directions"
+                style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '8px', padding: '12px 28px', borderRadius: '6px' }}
+              >
+                <LucideIcons.MapPin size={18} /> GET DIRECTIONS
+              </a>
             </div>
 
             {/* Bottom Slogan Layout */}
